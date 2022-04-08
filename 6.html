@@ -1,0 +1,30 @@
+<!DOCTYPE html>  
+ <html>  
+ <body>  
+     <p>Introducir la cadena</p>
+     <input type="text" id="cadena" size="70">
+ <button type="button" onclick="myFunction()"> Verficar</button> 
+ <p id="sumando"></p>  
+ <script>  
+ function myFunction() {
+   let cadena = document.getElementById("cadena").value;
+   let ii = 0
+   let t = cadena.length;
+   for (let i = 0; i < cadena.length; i++) {
+      if (cadena.charAt(i) == '(') {
+        ii = i+1
+        break
+      }
+   }
+   for (let i = 0; i < cadena.length; i++) {
+    if (cadena.charAt(i) == ')') {
+        t = i
+        break
+      }
+   }
+   cadena = cadena.substring(ii,t)
+   document.getElementById("sumando").innerHTML = cadena
+ }  
+ </script>  
+ </body>  
+ </html>  

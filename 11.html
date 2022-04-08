@@ -1,0 +1,25 @@
+<!DOCTYPE html>  
+ <html>  
+ <body>  
+     <p>Introducir los datos </p> 
+ <p id="sumando"></p>
+ <form >
+  Nombre: <input type="text" id="nombre" size="10"><br>
+  Apellido: <input type="text" id="apellido" size="10"><br>
+  Edad: <input type="number" id="edad" size="10">
+<br>
+  <input type="button" value="enviar" id="enviar" onclick="validar()" >
+ </form>
+ 
+ 
+
+ <script>  
+ function validar() { 
+   let a = document.getElementById("enviar")
+   a.value = "enviando..."
+   setTimeout(window.location.href = "11-2.html",2000)
+   
+ }  
+ </script>  
+ </body>  
+ </html>  

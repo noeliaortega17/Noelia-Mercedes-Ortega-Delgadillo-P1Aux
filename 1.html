@@ -1,0 +1,23 @@
+<!DOCTYPE html>  
+ <html>  
+ <body>  
+     <p>Introducir una edad</p>
+     <input type="number" id="edad">
+ <button type="button" onclick="myFunction()"> Verificar</button>  
+ <p id="sumando"></p>  
+ <script>  
+ function myFunction() {
+   let numero = document.getElementById("edad").value;
+   let text
+   if (numero >= 18) 
+   {
+     text = "ya puede conducir"
+   }  
+   else {
+     text = "no puede conducir"
+   } 
+   document.getElementById("sumando").innerHTML = text
+ }  
+ </script>  
+ </body>  
+ </html>  

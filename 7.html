@@ -1,0 +1,21 @@
+<!DOCTYPE html>  
+ <html>  
+ <body>  
+     <p>Introducir la cadena</p>
+     <input type="text" id="cadena" size="70">
+ <button type="button" onclick="myFunction()"> Invertir</button> 
+ <p id="sumando"></p>  
+ <script>  
+ function myFunction() {
+   let cadena = document.getElementById("cadena").value;
+   let t = cadena.length;
+   let s ="";
+   for (let i = cadena.length; i >= 0 ; i--) {
+        s = s + cadena.charAt(i)
+      
+   }
+   document.getElementById("sumando").innerHTML = s
+ }  
+ </script>  
+ </body>  
+ </html>  

@@ -1,0 +1,22 @@
+<!DOCTYPE html>  
+ <html>  
+ <body>  
+     <p>Introducir la fecha</p>
+     <input type="date" id="fecha">
+ <button type="button" onclick="myFunction()"> Verficar</button>
+ <p id="sumando"></p>  
+ <script>  
+ function myFunction() {
+   let fecha = document.getElementById("fecha").value;
+   let hoy = new Date()
+   hoy = hoy.toISOString().split('T')[0];
+   let h = new Date(hoy)
+   let a = new Date(fecha)
+   let r = (h - a) / (1000 * 3600 * 24)
+   r = r / 365;
+   r = Math.ceil(r);
+   document.getElementById("sumando").innerHTML = r//(h+' '+a)
+ }  
+ </script>  
+ </body>  
+ </html>  

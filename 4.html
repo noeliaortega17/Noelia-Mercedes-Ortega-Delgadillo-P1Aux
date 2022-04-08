@@ -1,0 +1,37 @@
+<!DOCTYPE html>  
+ <html>  
+ <body>  
+ <button type="button" onclick="myFunction()">Mostrar numeros aleatorios</button>  
+ <p id="sumando"></p>  
+ <script>  
+ function myFunction() {
+     let hasta =5
+     let desde = 1  
+   let numero = Math.floor(Math.random()*(hasta -(desde -1))) + desde;
+   let numero1 = Math.floor(Math.random()*(hasta -(desde -1))) + desde;
+   if (numero == numero1) 
+   {
+       while (numero == numero1)
+        {
+            numero1 = Math.floor(Math.random()*(hasta -(desde -1))) + desde;     
+       }
+    
+   }  
+    let numero2 = Math.floor(Math.random()*(hasta -(desde -1))) + desde;
+    if (numero == numero2 || numero1 == numero2)
+    {
+        while (numero2 == numero1 || numero == numero2)
+         {
+            numero2 = Math.floor(Math.random()*(hasta -(desde -1))) + desde;  
+        }
+        
+    }
+
+    
+   let numeros = numero + " " + numero1 + " " + numero2
+
+   document.getElementById("sumando").innerHTML = numeros  
+ }  
+ </script>  
+ </body>  
+ </html>  

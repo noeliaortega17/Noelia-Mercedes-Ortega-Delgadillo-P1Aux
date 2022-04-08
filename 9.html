@@ -1,0 +1,65 @@
+<!DOCTYPE html>  
+ <html>  
+ <body>  
+     <p>Seleccionar una opcion</p>
+ <button type="button" onclick="myFunction('1')"> piedra</button>  
+ <button type="button" onclick="myFunction('2')"> papel</button>
+ <button type="button" onclick="myFunction('3')"> tijera</button> <br><br>
+ 
+ <p>El sistema selecciono</p>
+ <button><p id="sumando"></p> </button> 
+ <p id="sumando"></p>  
+ <p style="color: red;">resultado</p>
+ <p id="re"></p>
+ <script>  
+ function myFunction(id) {
+   let numero = Math.floor(Math.random()*(3 -(1 -1))) + 1;
+   let numero2, numero3;
+   if (numero == 1) {
+      numero2 = "piedra"
+      if (id == 1) {
+        numero3 = "empate"
+      }
+      else {
+        if (id == 2) {
+          numero3 = "ganaste"
+        } else {
+          numero3 = "perdiste"
+        }
+      }
+   }
+   else {
+     if (numero == 2) {
+       numero2 = "papel"
+       if (id == 1) {
+        numero3 = "perdiste"
+      }
+      else {
+        if (id == 2) {
+          numero3 = "empate"
+        } else {
+          numero3 = "ganaste"
+        }
+      }
+     }
+     else {
+       numero2 = "tijera"
+       if (id == 1) {
+        numero3 = "ganaste"
+      }
+      else {
+        if (id == 2) {
+          numero3 = "perdiste"
+        } else {
+          numero3 = "empate"
+        }
+      }
+     }
+   }
+   document.getElementById("sumando").innerHTML = numero2
+   document.getElementById("re").innerHTML = numero3
+   
+ }  
+ </script>  
+ </body>  
+ </html>  

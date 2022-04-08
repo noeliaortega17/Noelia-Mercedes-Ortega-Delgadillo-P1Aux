@@ -1,0 +1,37 @@
+<!DOCTYPE html>  
+ <html>  
+ <body>  
+     <p>Introducirla edad     &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; introducir nombre </p>
+     <input type="number" id="numero">
+     <input type="text" id="nombre"><br>
+     <input type="number" id="numero1">
+     <input type="text" id="nombre1"><br>
+     <input type="number" id="numero2">
+     <input type="text" id="nombre2">
+ <button type="button" onclick="myFunction()"> Verficar</button> 
+ <p id="sumando"></p>  
+ <script>  
+ function myFunction() {
+   let num = document.getElementById("numero").value;
+   let num1 = document.getElementById("numero1").value;
+   let num2 = document.getElementById("numero2").value;
+   if (num>num1) {
+     if (num>num2) {
+      mayor = document.getElementById("nombre").value
+     } else {
+      mayor = document.getElementById("nombre2").value
+     }
+   }
+   else {
+    if (num1>num2) {
+      mayor = document.getElementById("nombre1").value
+     } else {
+      mayor = document.getElementById("nombre2").value
+     }
+   }
+   document.getElementById("sumando").innerHTML = mayor
+   
+ }  
+ </script>  
+ </body>  
+ </html>  
